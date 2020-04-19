@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 2</title>
-    
-    <!-- Keep wireframe.css for debugging, add your css to style.css -->
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled> 
-    <link id='stylecss' type="text/css" rel="stylesheet" href="../style.css">
 
-    <script src='../wireframe.js'></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 2</title>
 
-  <body>
+  <!-- Keep wireframe.css for debugging, add your css to style.css -->
+  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
 
-    <header>
-      <div>Put company logo and name here</div>
-    </header>
+  <script src='../wireframe.js'></script>
+</head>
 
-    <nav>
-      <div>Put website navigation links here</div>
-    </nav>
+<body>
 
-    <main>
-      <article id='Website Under Construction'>
-    <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-      </article>
-    </main>
+  <header>
+    <div>Put company logo and name here</div>
+  </header>
 
-    <footer>
-      <div>&copy;<script>
+  <nav>
+    <div>Put website navigation links here</div>
+  </nav>
+
+  <main>
+    <article id='Website Under Construction'>
+      <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
+      <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
+    </article>
+    <article>
+      <h1>About Us</h1>
+      <p>
+        After 3 months of temporary closing and improving, we are rejoice to tell you that we are back. Now, with the
+        most brand new techniques, we are confident that you will find the best experiences here.
+      </p>
+      <ul>
+        <li>
+          Dolby Vision HDR brings extraordinary color, contrast, and brightness to the screen, transforming your viewing
+          experience.
+          <br>
+          <img src="dolby-vision.jpg" alt="dolby-vision" width="500" height="200">
+        </li>
+        <li>
+          Dolby Atmos creates powerful, moving audio by introducing two important concepts to cinema sound: audio
+          objects and overhead speakers.
+          <br>
+          <img src="dolby-atmos.jpg" alt="dolby-atmos" width="500" height="200">
+        </li>
+        <li>
+          There are also new seats for you: standard seats and reclinable first class seats
+          <br>
+          <img src="seat1.jpg" alt="seat1" width="400" height="200">
+          <img src="seat2.jpg" alt="seat1" width="400" height="200">
+        </li>
+      </ul>
+    </article>
+  
+    <article>
+      <h1>Prices</h1>
+      <table>
+        <tr>
+          <th>Seat type</th>
+          <th>Seat code</th>
+          <th>All day Monday and Wednesday AND 12pm on Weekdays</th>
+          <th>All other times</th>
+        </tr>
+        <tr>
+          <td>Standard Adult</td>
+          <td>STA</td>
+          <td>14.00</td>
+          <td>19.80</td>
+        </tr>
+        <tr>
+          <td>Standard Concession</td>
+          <td>STP</td>
+          <td>12.50</td>
+          <td>17.50</td>
+        </tr>
+        <tr>
+          <td>Standard Child</td>
+          <td>STC</td>
+          <td>11.00</td>
+          <td>15.30</td>
+        </tr>
+        <tr>
+          <td>First Class Adult</td>
+          <td>FCA</td>
+          <td>24.00</td>
+          <td>30.00</td>
+        </tr>
+        <tr>
+          <td>First Class Concession</td>
+          <td>FCP</td>
+          <td>22.50</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>First Class Child</td>
+          <td>FCC</td>
+          <td>21.00</td>
+          <td>24.00</td>
+        </tr>
+      </table>
+
+    </article>
+  </main>
+
+  <footer>
+    <div>&copy;
+      <script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-    </footer>
+      </script> Put your name(s), student number(s) and group name here. Last modified
+      <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
+      Programming course at RMIT University in Melbourne, Australia.</div>
+    <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+  </footer>
 
-  </body>
+</body>
+
 </html>
