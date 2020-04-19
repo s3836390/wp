@@ -12,6 +12,7 @@
 
   <script src='../wireframe.js'></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +34,6 @@
       <a href="#Now Showing">Now Showing</a>
     </div>
   </nav>
-
   <main>
     <article class="aboutus">
       <a name="About Us">
@@ -41,11 +41,11 @@
         </div>
       </a>
       <h1>About Us</h1>
-      <p>
+      <p style="font-family:Open Sans Condensed;">
         After 3 months of temporary closing and improving, we are rejoice to tell you that we are back. Now, with the
         most brand new techniques, we are confident that you will find the best experiences here.
       </p>
-      <ul>
+      <ul style="font-family:Open Sans Condensed;">
         <li>
           Dolby Vision HDR brings extraordinary color, contrast, and brightness to the screen, transforming your viewing
           experience.
@@ -73,7 +73,7 @@
         </div>
       </a>
       <h1>Prices</h1>
-      <table>
+      <table style="font-family:Open Sans Condensed;">
         <tr>
           <th>Seat type</th>
           <th>Seat code</th>
@@ -120,14 +120,14 @@
 
     </article>
 
-    <article>
+    <article style="font-family:Open Sans Condensed;">
       <a name="Now Showing">
         <div id="Now Showing">
         </div>
       </a>
       <h1>Now Showing</h1>
       <div class="row">
-        <div class="column" style="background-color:rgb(175, 166, 166);">
+        <div class="column" >
           <h2>Avengers: Endgame</h2>
           <p class="movie"><img src="avenger.jpg" alt="avenger" width="120" height="200">
             PG-13 <br>
@@ -142,7 +142,7 @@
           </p>
         </div>
         
-        <div class="column" style="background-color:rgb(175, 166, 166);">
+        <div class="column" >
           <h2>Top End Wedding</h2>
           <p class="movie"><img src="wedding.jpg" alt="wedding" width="120" height="200">
             R <br>
@@ -158,7 +158,7 @@
           </p>
         </div>
         
-        <div class="column" style="background-color:rgb(175, 166, 166);">
+        <div class="column" >
           <h2>Dumbo</h2>
           <p class="movie"><img src="dumbo.jpg" alt="dumbo" width="120" height="200">
             G <br>
@@ -174,7 +174,7 @@
           </p>
         </div>
         
-        <div class="column" style="background-color:rgb(175, 166, 166);">
+        <div class="column">
           <h2>The Happy Prince</h2>
           <p class="movie"><img src="prince.jpg" alt="prince" width="120" height="200">
             PG-13 <br>
@@ -196,12 +196,13 @@
     </article>
 
     <article>
+    
       <h1>Synopsis Area</h1>
       
 
-    <div style="background-color:rgb(124, 129, 111);">
+    <div >
       <h2>Avengers:Endgame     PG-13</h2>
-      <p class="trailer">
+      <p class="trailer" style="font-family:Open Sans Condensed;">
         <video src="trailer.mov" controls width="900" height="200"></video>
         Years after they've failed to stop Thanos from snapping, the Avengers now give up and move on. Suddenly, Ant man come back along with a way to undo the past.
         <br>
@@ -223,7 +224,12 @@
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified
+      </script> 
+      Hua Tien Trung <br>
+      s3836390 <br>
+      huatientrung01@gmail.com <br> 
+      0969501914 <br>
+      https://github.com/s3836390/wp.git
       <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
       Programming course at RMIT University in Melbourne, Australia.</div>
