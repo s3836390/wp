@@ -3,6 +3,41 @@ table, th, td {
         padding: 10px;
         border: 1px solid black;
         border-collapse: collapse;
-      }
+ }
 .movie img {
     float: left;}
+.column {
+        float: left;
+        width: 25%;
+ }
+ @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+.trailer video{
+    float: right;}
+.prices {background-image: url(background1.jpg);
+    background-color: aquamarine;} 
+.parallax {
+    background-image: url(background1.jpg);
+    height: 500px;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutus {background-color: aquamarine;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+  }

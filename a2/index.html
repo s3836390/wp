@@ -11,24 +11,35 @@
   <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
 
   <script src='../wireframe.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <header>
-    <div>Put company logo and name here</div>
+ 
+  <header >
+    
+    <div class="movie">
+      <img src="Logo.jpg" alt="logo" width="300" height="200">
+      <span  style='font-family: "Roboto"; font-size: 600%; '>ALOHA CINEMA</span>
+    </div>
   </header>
+  <br><br><br><br><br><br><br>
+
 
   <nav>
-    <div>Put website navigation links here</div>
+    <div class="sticky">
+      <a href="#About Us">About Us</a>
+      <a href="#Prices">Prices</a>
+      <a href="#Now Showing">Now Showing</a>
+    </div>
   </nav>
 
   <main>
-    <article id='Website Under Construction'>
-      <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-      <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-    </article>
-    <article>
+    <article class="aboutus">
+      <a name="About Us">
+        <div id="About Us">
+        </div>
+      </a>
       <h1>About Us</h1>
       <p>
         After 3 months of temporary closing and improving, we are rejoice to tell you that we are back. Now, with the
@@ -56,7 +67,11 @@
       </ul>
     </article>
   
-    <article>
+    <article class="prices"; class="parallax" >
+      <a name="Prices">
+        <div id="Prices">
+        </div>
+      </a>
       <h1>Prices</h1>
       <table>
         <tr>
@@ -106,54 +121,101 @@
     </article>
 
     <article>
+      <a name="Now Showing">
+        <div id="Now Showing">
+        </div>
+      </a>
       <h1>Now Showing</h1>
+      <div class="row">
+        <div class="column" style="background-color:rgb(175, 166, 166);">
+          <h2>Avengers: Endgame</h2>
+          <p class="movie"><img src="avenger.jpg" alt="avenger" width="120" height="200">
+            PG-13 <br>
+            <br>
+            Mon- <br>
+            Tue- <br>
+            Wed-9pm (T21) <br>
+            Thu-9pm (T21) <br>
+            Fri-9pm (T21) <br>
+            Sat-6pm (T18) <br>
+            Sun-6pm (T18)      
+          </p>
+        </div>
+        
+        <div class="column" style="background-color:rgb(175, 166, 166);">
+          <h2>Top End Wedding</h2>
+          <p class="movie"><img src="wedding.jpg" alt="wedding" width="120" height="200">
+            R <br>
+            <br>
+            Mon-6pm (T18) <br>
+            Tue-6pm (T18) <br>
+            Wed- <br>
+            Thu- <br>
+            Fri- <br>
+            Sat-3pm (T15) <br>
+            Sun-3pm (T15) <br>
     
-      <p class="movie"><img src="avenger.jpg" alt="avenger" width="150" height="150">
-        Avengers: Endgame PG-13 <br>
-        Mon- <br>
-        Tue- <br>
-        Wed-9pm (T21) <br>
-        Thu-9pm (T21) <br>
-        Fri-9pm (T21) <br>
-        Sat-6pm (T18) <br>
-        Sun-6pm (T18)      
-      </p>
-      <p class="movie"><img src="wedding.jpg" alt="wedding" width="150" height="150">
-        Top End Wedding R <br>
-        Mon-6pm (T18) <br>
-        Tue-6pm (T18) <br>
-        Wed- <br>
-        Thu- <br>
-        Fri- <br>
-        Sat-3pm (T15) <br>
-        Sun-3pm (T15) <br>
+          </p>
+        </div>
+        
+        <div class="column" style="background-color:rgb(175, 166, 166);">
+          <h2>Dumbo</h2>
+          <p class="movie"><img src="dumbo.jpg" alt="dumbo" width="120" height="200">
+            G <br>
+            <br>
+            Mon-12pm (T12) <br>
+            Tue-12pm (T12) <br>
+            Wed-6pm (T18) <br>
+            Thu-6pm (T18) <br>
+            Fri-6pm (T18) <br>
+            Sat-12pm (T12) <br>
+            Sun-12pm (T12) <br>
+    
+          </p>
+        </div>
+        
+        <div class="column" style="background-color:rgb(175, 166, 166);">
+          <h2>The Happy Prince</h2>
+          <p class="movie"><img src="prince.jpg" alt="prince" width="120" height="200">
+            PG-13 <br>
+            <br>
+            Mon- <br>
+            Tue- <br>
+            Wed-12pm (T12) <br>
+            Thu-12pm (T12) <br>
+            Fri-12pm (T12) <br>
+            Sat-9pm (T21) <br>
+            Sun-9pm (T21)
+    
+          </p>
+        </div>
+    
+      
+     
+     
+    </article>
 
-      </p>
-      <p class="movie"><img src="dumbo.jpg" alt="dumbo" width="150" height="150">
-        Dumbo G <br>
-        Mon-12pm (T12) <br>
-        Tue-12pm (T12) <br>
-        Wed-6pm (T18) <br>
-        Thu-6pm (T18) <br>
-        Fri-6pm (T18) <br>
-        Sat-12pm (T12) <br>
-        Sun-12pm (T12) <br>
+    <article>
+      <h1>Synopsis Area</h1>
+      
 
+    <div style="background-color:rgb(124, 129, 111);">
+      <h2>Avengers:Endgame     PG-13</h2>
+      <p class="trailer">
+        <video src="trailer.mov" controls width="900" height="200"></video>
+        Years after they've failed to stop Thanos from snapping, the Avengers now give up and move on. Suddenly, Ant man come back along with a way to undo the past.
+        <br>
+        <br>
+        MAKE A BOOKING:<button type="button" onclick="alert('Not available at the moment')">Wed-9pm (T21)</button>
+        <button type="button" onclick="alert('Not available at the moment')">Thu-9pm (T21)</button>
+        <button type="button" onclick="alert('Not available at the moment')">Fri-9pm (T21)</button>
+        <button type="button" onclick="alert('Not available at the moment')">Sat-6pm (T18)</button>
+        <button type="button" onclick="alert('Not available at the moment')">Sun-6pm (T18)</button>
       </p>
-      <p class="movie"><img src="prince.jpg" alt="prince" width="150" height="150">
-        The Happy Prince PG-13 <br>
-        Mon- <br>
-        Tue- <br>
-        Wed-12pm (T12) <br>
-        Thu-12pm (T12) <br>
-        Fri-12pm (T12) <br>
-        Sat-9pm (T21) <br>
-        Sun-9pm (T21)
-
-      </p>
+    </div>
     </article>
     <article>
-      
+      <h1>Booking Area</h1>
     </article>
   </main>
 
