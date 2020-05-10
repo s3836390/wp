@@ -43,8 +43,10 @@ table, th, td {
     font-size: 20px;
   }
   nav a { color: rgb(50, 204, 71);}
-  a:focus {
-    color: blue;}
+
+.currentlink {
+  color: brown;
+}
   h1 {font-size: 250%;
       color: red;
 padding: 40px;

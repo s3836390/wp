@@ -1,1 +1,3 @@
-/* Insert your javascript here */
+function currentlink() {
+    document.getElementsByClassName(currentlink)
+}
