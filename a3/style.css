@@ -1,0 +1,52 @@
+
+table, th, td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+ }
+.movie img {
+    float: left;}
+    .column {
+        background-color: skyblue;
+            float: left;
+            width: 25%;
+     }
+     @media screen and (max-width: 900px) {
+        .column {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .column {
+          width: 100%;
+        }
+      }
+.trailer video{
+    float: right;}
+.prices {background-image: url(background1.jpg);
+    background-color: aquamarine;} 
+.parallax {
+    background-image: url(background1.jpg);
+    height: 500px;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutus {background-color: skyblue;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 20px;
+    font-size: 20px;
+  }
+  nav a { color: rgb(50, 204, 71);}
+  h1 {font-size: 250%;
+      color: red;
+padding: 40px;
+background-image: url(background3.jpg);
+}
+body {background-color: skyblue;}
+button {color: red; background-color: salmon; border: none;}
