@@ -19,4 +19,25 @@ document.getElementById("wheel3").addEventListener("wheel",current3)
 
 function showhidden1(){
   document.getElementById("synopsisAC").style.visibility="visible"
+  document.getElementById("synopsisRMC").style.visibility="hidden"
+  document.getElementById("synopsisC").style.visibility="hidden"
+  document.getElementById("synopsisD").style.visibility="hidden"
+}
+function showhidden2(){
+  document.getElementById("synopsisRMC").style.visibility="visible"
+  document.getElementById("synopsisAC").style.visibility="hidden"
+  document.getElementById("synopsisC").style.visibility="hidden"
+  document.getElementById("synopsisD").style.visibility="hidden"
+}
+function showhidden3(){
+  document.getElementById("synopsisC").style.visibility="visible"
+  document.getElementById("synopsisAC").style.visibility="hidden"
+  document.getElementById("synopsisRMC").style.visibility="hidden"
+  document.getElementById("synopsisD").style.visibility="hidden"
+}
+function showhidden4(){
+  document.getElementById("synopsisD").style.visibility="visible"
+  document.getElementById("synopsisAC").style.visibility="hidden"
+  document.getElementById("synopsisRMC").style.visibility="hidden"
+  document.getElementById("synopsisC").style.visibility="hidden"
 }
