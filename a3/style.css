@@ -25,14 +25,7 @@ table, th, td {
     float: right;}
 .prices {background-image: url(background1.jpg);
     background-color: aquamarine;} 
-.parallax {
-    background-image: url(background1.jpg);
-    height: 500px;
-    background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .aboutus {background-color: skyblue;
 }
 li{
@@ -56,4 +49,10 @@ padding: 40px;
 background-image: url(background3.jpg);
 }
 body {background-color: skyblue;}
-button {color: red; background-color: salmon; border: none;}
+button {color: red; background-color: salmon; border: turquoise;
+  padding: 10px 20px;
+  border-radius: 15px;}
+article {
+  width: 100vw;
+  height: 100vh;
+}
