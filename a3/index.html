@@ -32,11 +32,11 @@
 
   <nav class="sticky">
     <div>
-      <li> <a style="color: blue;text-decoration: none;" onclick="current1()" id="link1" href="#About Us">About Us</a>
+      <li> <a style="color: blue;text-decoration: none;" onclick="current1()" id="link1" href="#About Us">About Us&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </li>
-      <li> <a style="color: blue;text-decoration: none;" onclick="current2()" id="link2" href="#Prices">Prices</a></li>
+      <li> <a style="color: blue;text-decoration: none;" onclick="current2()" id="link2" href="#Prices">Prices&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
       <li> <a style="color: blue;text-decoration: none;" onclick="current3()" id="link3" href="#Now Showing">Now
-          Showing</a></li>
+          Showing&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
     </div>
     </ul>
   </nav>
@@ -138,8 +138,12 @@
       <h1>Now Showing</h1>
       <div class="row">
         <div class="column">
+          
           <h2>Avengers: Endgame</h2>
-          <p class="movie"><img src="avenger.jpg" alt="avenger" width="120" height="200">
+          <p class="movie">
+            <a id="moviePanelANM1" onclick="showhidden1()" href="#synopsisAC">
+            <img src="avenger.jpg" alt="avenger" width="120" height="200">
+            </a>
             PG-13 <br>
             <br>
             Mon- <br>
@@ -215,9 +219,10 @@
       <h1>Synopsis Area</h1>
 
 
-      <div>
+      <div id="synopsisAC">
         <h2>Avengers:Endgame PG-13</h2>
         <p class="trailer" style="font-family:Open Sans Condensed;">
+  
           <video src="trailer1.mov" controls width="700" height="200"></video>
           Years after they've failed to stop Thanos from snapping, the Avengers now give up and move on. Suddenly, Ant
           man come back along with a way to undo the past.
@@ -231,7 +236,7 @@
         </p>
       </div>
       <br>
-      <div>
+      <div id="synosisRMC">
         <h2>Top End Wedding R</h2>
         <p class="trailer" style="font-family:Open Sans Condensed;">
           <video src="trailer2.mp4" controls width="700" height="200"></video>
@@ -247,7 +252,7 @@
         </p>
       </div>
       <br>
-      <div>
+      <div id="synosisC">
         <h2>Dumbo G</h2>
         <p class="trailer" style="font-family:Open Sans Condensed;" >
           <video src="trailer3.mp4" controls width="700" height="200"></video>
@@ -265,7 +270,7 @@
         </p>
       </div>
         <br>
-        <div>
+        <div id="synosisD">
         <h2>The Happy Prince PG-13</h2>
         <p class="trailer" style="font-family:Open Sans Condensed;" >
           <video src="trailer4.mp4" controls width="700" height="200"></video>
