@@ -46,3 +46,6 @@ var movieid = {
 }
 var movieday ="MON,TUE,WED,THU,FRI,SAT,SUN";
 var moviehour ="T12,T15,T18,T21";
+var prices = {   p1: { o1:18.5, o2:15.5, o3:30 },  p2: { o1:28.5, o2:25.5, o3:40 },  p3: { o1:38.5, o2:35.5, o3:50 }};
+alert(prices.p2.o3); 
+alert(prices.p3.o1);

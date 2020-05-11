@@ -299,7 +299,8 @@
     <article>
       <h1>Booking Area</h1>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STANDARD</p>
-<p>Adults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA">
+<p> <label for="adults">Adults</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -314,7 +315,7 @@
 </select>
 </p>
 <br>
-<p>Concesssion&nbsp;<select name="seats[STP]" id="seats-STP">
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STP]" id="seats-STP">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -329,7 +330,7 @@
 </select>
 <br><br>
 </p>
-<p>Children&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STC]" id="seats-STC">
+<p><label for="children">Children</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<select name="seats[STC]" id="seats-STC">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -343,7 +344,7 @@
   <option value="1">10</option>
 </select></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIRST CLASS</p>
-<p>Adults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTA]" id="seats-FTA">
+<p><label for="adults">Adults</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTA]" id="seats-FTA">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -358,7 +359,7 @@
 </select>
 </p>
 <br>
-<p>Concesssion&nbsp;<select name="seats[FTP]" id="seats-FTP">
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;<select name="seats[FTP]" id="seats-FTP">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -373,7 +374,7 @@
 </select>
 <br><br>
 </p>
-<p>Children&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTC]" id="seats-FTC">
+<p><label for="children">Children</label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTC]" id="seats-FTC">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="1">2</option>
@@ -386,8 +387,21 @@
   <option value="1">9</option>
   <option value="1">10</option>
 </select></p>
+<label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='text' name='cust[name]' pattern="^[a-zA-Z\-. ?]{1,100}$" >
+<br><br>
+<label for="email">Email</label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" name='cust[email]' >
+<br><br>
+<label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="tel" name='cust[phone]' pattern="^(\(04\)|04|\+614)( ?\d){8}$" >
+<br><br>
+<label for="creditcard">Credit Card</label>&nbsp;
+<input type="text" name="cust[card]" pattern="([0-9]){14,19}">
 
-    </article>
+</article>
+    
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </main>
 
