@@ -41,3 +41,8 @@ function showhidden4(){
   document.getElementById("synopsisRMC").style.visibility="hidden"
   document.getElementById("synopsisANM").style.visibility="hidden"
 }
+var movieid = {
+  md1:ACT,
+}
+var movieday ="MON,TUE,WED,THU,FRI,SAT,SUN";
+var moviehour ="T12,T15,T18,T21";
