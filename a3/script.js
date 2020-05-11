@@ -16,3 +16,7 @@ document.getElementById("link2").style.color=("blue");
 document.getElementById("wheel1").addEventListener("wheel",current1)
 document.getElementById("wheel2").addEventListener("wheel",current2)
 document.getElementById("wheel3").addEventListener("wheel",current3)
+
+function showhidden1(){
+  document.getElementById("synopsisAC").style.visibility="visible"
+}

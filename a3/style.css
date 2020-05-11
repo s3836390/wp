@@ -21,7 +21,7 @@ table, th, td {
           width: 100%;
         }
       }
-.trailer video{
+.synopsis video{
     float: right;}
 .prices {background-image: url(background1.jpg);
     background-color: aquamarine;} 
@@ -55,4 +55,7 @@ button {color: red; background-color: salmon; border: turquoise;
 article {
   width: 100vw;
   height: 100vh;
+}
+.synopsis {
+  visibility: hidden;
 }
