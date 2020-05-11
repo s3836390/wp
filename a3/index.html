@@ -9,14 +9,11 @@
   <!-- Keep wireframe.css for debugging, add your css to style.css -->
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
   <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
-
-  <script src='../wireframe.js'></script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
-  <script src="script.js"></script>
-  <script>
-
-  </script>
+  <script defer src="script.js"></script>
+  
 </head>
 
 <body>
@@ -33,10 +30,11 @@
 
   <nav class="sticky">
     <div>
-      <a  onclick="currentlink()" href="#About Us">About Us</a>
-      <a  onclick="currentlink()" href="#Prices">Prices</a>
-      <a  onclick="currentlink()" href="#Now Showing">Now Showing</a>
+     <li> <a style="color: blue;text-decoration: none;" onclick="current1()" id="link1" href="#About Us">About Us</a></li>
+     <li> <a style="color: blue;text-decoration: none;" onclick="current2()" id="link2" href="#Prices">Prices</a></li>
+     <li> <a style="color: blue;text-decoration: none;" onclick="current3()" id="link3" href="#Now Showing">Now Showing</a></li>
     </div>
+    </ul>
   </nav>
   <main>
     <article class="aboutus">

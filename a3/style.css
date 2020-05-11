@@ -35,18 +35,21 @@ table, th, td {
 }
 .aboutus {background-color: skyblue;
 }
+li{
+  display: inline-block;
+
+}
+
 .sticky {
     position: sticky;
     top: 0;
-    background-color: yellow;
-    padding: 20px;
+    background-color: teal;
+    padding: 0.02px;
     font-size: 20px;
+  
   }
-  nav a { color: rgb(50, 204, 71);}
 
-.currentlink {
-  color: brown;
-}
+
   h1 {font-size: 250%;
       color: red;
 padding: 40px;

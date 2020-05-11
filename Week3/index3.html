@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .focus {
+  color: red;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li> <a href="#"> dog </a> </li>
+        <li> <a href="#"> cat </a> </li>
+      </ul>
+    <script>
+        $('li').click(function() {
+  $(this).siblings().find('a').removeClass('focus');
+  $(this).find('a').addClass('focus');
+});
+    </script>
+</body>
+</html>
