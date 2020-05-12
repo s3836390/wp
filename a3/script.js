@@ -53,6 +53,13 @@ function futureonly() {
   }
 }
 
+function booking(){
+  document.getElementsByClassName('THU T21').value=19.8;
+  document.getElementById('movie-id').value='ACT';
+  document.getElementById('movie-day').value='THU';
+  document.getElementById('movie-hour').value='T21';
+  document
+}yP
 function sta(){
   var seatsSTA = document.getElementById('seats-STA').value;
   var seatsSTP = document.getElementById('seats-STP').value;
@@ -60,9 +67,9 @@ function sta(){
   var seatsFTA = document.getElementById('seats-FTA').value;
   var seatsFTP = document.getElementById('seats-FTP').value;
   var seatsFTC = document.getElementById('seats-FTC').value;
-  document.getElementById('totalprice').innerHTML = (seatsSTA*3).toFixed(2);
+  var priceSTA = document.getElementsByClassName('THU T21').value;
+  document.getElementById('totalprice').innerHTML = (seatsSTA*priceSTA).toFixed(2);
 }
-
 
 
 

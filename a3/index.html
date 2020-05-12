@@ -234,7 +234,8 @@
           man come back along with a way to undo the past.
           <br>
           <br>
-          MAKE A BOOKING:<button type="button" onclick="alert('Not available at the moment')">Wed-9pm (T21)</button>
+          MAKE A BOOKING:
+          <button type="button" class="WED T21">Wed-9pm (T21)</button>
           <button type="button" class="THU T21" onclick="booking()">Thu-9pm (T21)</button>
           <button type="button" class="FRI T21">Fri-9pm (T21)</button>
           <button type="button" class="SAT T18">Sat-6pm (T18)</button>
@@ -265,13 +266,13 @@
           Holt, a circus performer, is tasked with caring for a baby elephant with oversized ears, Dumbo. But when it is discovered that Dumbo can fly, a few wicked men try to take advantage of the situation.
           <br><br>
           MAKE A BOOKING:
-          <button type="button" onclick="alert('Not available at the moment')">Mon-12pm (T12)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Tue-12pm (T12)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Wed-6pm (T18)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Thu-6pm (T18)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Fri-6pm (T18)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Sat-12pm (T12))</button>
-          <button type="button" onclick="alert('Not available at the moment')">Sun-12pm (T12)</button>
+          <button type="button" class="MON T12">Mon-12pm (T12)</button>
+          <button type="button" class="TUE T12">Tue-12pm (T12)</button>
+          <button type="button" class="WED T18">Wed-6pm (T18)</button>
+          <button type="button" class="THU T18">Thu-6pm (T18)</button>
+          <button type="button" class="FRI T18">Fri-6pm (T18)</button>
+          <button type="button" class="SAT T12">Sat-12pm (T12))</button>
+          <button type="button" class="SUN T12">Sun-12pm (T12)</button>
 
         </p>
       </div>
@@ -285,11 +286,11 @@
           His body ailing, Oscar Wilde lives out his last days in exile, observing the difficulties and failures surrounding him with ironic detachment, humour, and the wit that defined his life.
           <br><br>
           MAKE A BOOKING:
-          <button type="button" onclick="alert('Not available at the moment')">Wed-12pm (T12)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Thu-12pm (T12)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Fri-12pm (T12)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Sat-9pm (T21)</button>
-          <button type="button" onclick="alert('Not available at the moment')">Sun-9pm (T21)</button>
+          <button type="button" class="WED T12">Wed-12pm (T12)</button>
+          <button type="button" class="THU T12">Thu-12pm (T12)</button>
+          <button type="button" class="FRI T12">Fri-12pm (T12)</button>
+          <button type="button" class="SAT T21">Sat-9pm (T21)</button>
+          <button type="button" class="SUN T21">Sun-9pm (T21)</button>
         </p>
         </div>
       
@@ -298,11 +299,16 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <article>
       <h1>Booking Area</h1>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STANDARD</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="title">sdfsd</span>
+        <span id="day"></span>
+        <span id="time"></span>
+        <br><br>
+        STANDARD</p>
       <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
-        <input type="hidden" name="movie[id]" id="movie-id" value="ACT,RMC,AHF,ANM">
-        <input type="hidden" name="movie[day]" id="movie-day" value="MON,TUE,WED,THU,FRI,SAT,SUN">
-        <input type="hidden" name="movie[hour]" id="movie-hour" value="T12,T15,T18,T21">
+        <input type="hidden" name="movie[id]" id="movie-id"  >
+        <input type="hidden" name="movie[day]" id="movie-day" >
+        <input type="hidden" name="movie[hour]" id="movie-hour" >
 <p> <label for="adults">Adults</label>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA" onchange="sta()">
   <option value="">Please select</option>
