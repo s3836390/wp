@@ -304,7 +304,7 @@
         <input type="hidden" name="movie[day]" id="movie-day" value="MON,TUE,WED,THU,FRI,SAT,SUN">
         <input type="hidden" name="movie[hour]" id="movie-hour" value="T12,T15,T18,T21">
 <p> <label for="adults">Adults</label>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA" onchange="sta()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -411,7 +411,7 @@
 <input type="text" name="cust[card]" id="cust-card" pattern="^([0-9]){14,19}$">
 <br><br>
 <label for="expiry">Expiry</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="month" name="cust[expiry]" id="cust-expiry" onchange="futureonly()" min="2020-05" >
+<input type="month" name="cust[expiry]" id="cust-expiry" onchange="futureonly()"  >
 <br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">

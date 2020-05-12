@@ -42,21 +42,30 @@ function showhidden4() {
   document.getElementById("synopsisANM").style.visibility = "hidden"
 }
 
-var today = new Date();
-var chosendate = document.getElementById("cust-expiry") ;
+
+
 function futureonly() {
-if (chosendate>today) {
-  alert("Please insert future date");
-}}
+  var chosendate = document.getElementById("cust-expiry").value;
+  var today = new Date();
+  console.log(chosendate + "   " + today)
+  if (chosendate>today) {
+    alert("Please insert future date");
+  }
+}
 
-var seatsSTA = document.getElementById('seats-STA').value;
-var seatsSTP = document.getElementById('seats-STP').value;
-var seatsSTC = document.getElementById('seats-STC').value;
-var seatsSTA = document.getElementById('seats-STA').value;
-var seatsSTP = document.getElementById('seats-STP').value;
-var seatsSTC = document.getElementById('seats-STC').value;
+function sta(){
+  var seatsSTA = document.getElementById('seats-STA').value;
+  var seatsSTP = document.getElementById('seats-STP').value;
+  var seatsSTC = document.getElementById('seats-STC').value;
+  var seatsFTA = document.getElementById('seats-FTA').value;
+  var seatsFTP = document.getElementById('seats-FTP').value;
+  var seatsFTC = document.getElementById('seats-FTC').value;
+  document.getElementById('totalprice').innerHTML = (seatsSTA*3).toFixed(2);
+}
 
 
 
-document.getElementById('totalprice').innerHTML = (seatsSTA*3).toFixed(2);
+
+
+
 
