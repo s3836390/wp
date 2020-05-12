@@ -235,11 +235,11 @@
           <br>
           <br>
           MAKE A BOOKING:
-          <button type="button" class="WED T21">Wed-9pm (T21)</button>
-          <button type="button" class="THU T21" onclick="booking()">Thu-9pm (T21)</button>
-          <button type="button" class="FRI T21">Fri-9pm (T21)</button>
-          <button type="button" class="SAT T18">Sat-6pm (T18)</button>
-          <button type="button" class="SUN T18">Sun-6pm (T18)</button>
+          <button type="button" class="WED T21"onclick="booking1()">Wed-9pm (T21)</button>
+          <button type="button" class="THU T21"onclick="booking2()">Thu-9pm (T21)</button>
+          <button type="button" class="FRI T21"onclick="booking3()">Fri-9pm (T21)</button>
+          <button type="button" class="SAT T18"onclick="booking4()">Sat-6pm (T18)</button>
+          <button type="button" class="SUN T18"onclick="booking5()">Sun-6pm (T18)</button>
         </p>
       </div>
       <br>
@@ -251,10 +251,10 @@
           that they can reunite her parents and pull off their dream wedding.
           <br><br>
           MAKE A BOOKING:
-          <button type="button" class="MON T18">Mon-6pm (T18)</button>
-          <button type="button" class="TUE T18">Tue-6pm (T18)</button>
-          <button type="button" class="SAT T15">Sat-3pm (T15)</button>
-          <button type="button" class="SUN T15">Sun-3pm (T15)</button>
+          <button type="button" class="MON T18"onclick="booking6()">Mon-6pm (T18)</button>
+          <button type="button" class="TUE T18"onclick="booking7()">Tue-6pm (T18)</button>
+          <button type="button" class="SAT T15"onclick="booking8()">Sat-3pm (T15)</button>
+          <button type="button" class="SUN T15"onclick="booking9()">Sun-3pm (T15)</button>
 
         </p>
       </div>
@@ -266,13 +266,13 @@
           Holt, a circus performer, is tasked with caring for a baby elephant with oversized ears, Dumbo. But when it is discovered that Dumbo can fly, a few wicked men try to take advantage of the situation.
           <br><br>
           MAKE A BOOKING:
-          <button type="button" class="MON T12">Mon-12pm (T12)</button>
-          <button type="button" class="TUE T12">Tue-12pm (T12)</button>
-          <button type="button" class="WED T18">Wed-6pm (T18)</button>
-          <button type="button" class="THU T18">Thu-6pm (T18)</button>
-          <button type="button" class="FRI T18">Fri-6pm (T18)</button>
-          <button type="button" class="SAT T12">Sat-12pm (T12))</button>
-          <button type="button" class="SUN T12">Sun-12pm (T12)</button>
+          <button type="button" class="MON T12"onclick="booking10()">Mon-12pm (T12)</button>
+          <button type="button" class="TUE T12"onclick="booking11()">Tue-12pm (T12)</button>
+          <button type="button" class="WED T18"onclick="booking12()">Wed-6pm (T18)</button>
+          <button type="button" class="THU T18"onclick="booking13()">Thu-6pm (T18)</button>
+          <button type="button" class="FRI T18"onclick="booking14()">Fri-6pm (T18)</button>
+          <button type="button" class="SAT T12"onclick="booking15()">Sat-12pm (T12))</button>
+          <button type="button" class="SUN T12"onclick="booking16()">Sun-12pm (T12)</button>
 
         </p>
       </div>
@@ -286,11 +286,11 @@
           His body ailing, Oscar Wilde lives out his last days in exile, observing the difficulties and failures surrounding him with ironic detachment, humour, and the wit that defined his life.
           <br><br>
           MAKE A BOOKING:
-          <button type="button" class="WED T12">Wed-12pm (T12)</button>
-          <button type="button" class="THU T12">Thu-12pm (T12)</button>
-          <button type="button" class="FRI T12">Fri-12pm (T12)</button>
-          <button type="button" class="SAT T21">Sat-9pm (T21)</button>
-          <button type="button" class="SUN T21">Sun-9pm (T21)</button>
+          <button type="button" class="WED T12"onclick="booking17()">Wed-12pm (T12)</button>
+          <button type="button" class="THU T12"onclick="booking18()">Thu-12pm (T12)</button>
+          <button type="button" class="FRI T12"onclick="booking19()">Fri-12pm (T12)</button>
+          <button type="button" class="SAT T21"onclick="booking20()">Sat-9pm (T21)</button>
+          <button type="button" class="SUN T21"onclick="booking21()">Sun-9pm (T21)</button>
         </p>
         </div>
       
@@ -300,8 +300,8 @@
     <article>
       <h1>Booking Area</h1>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span id="title">sdfsd</span>
-        <span id="day"></span>
+        <span id="title"></span> <span> - </span>
+        <span id="day"></span><span> - </span>
         <span id="time"></span>
         <br><br>
         STANDARD</p>
@@ -310,7 +310,7 @@
         <input type="hidden" name="movie[day]" id="movie-day" >
         <input type="hidden" name="movie[hour]" id="movie-hour" >
 <p> <label for="adults">Adults</label>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA" onchange="sta()">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA" onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -325,7 +325,7 @@
 </select>
 </p>
 <br>
-<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STP]" id="seats-STP">
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STP]" id="seats-STP"onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -340,7 +340,7 @@
 </select>
 <br><br>
 </p>
-<p><label for="children">Children</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<select name="seats[STC]" id="seats-STC">
+<p><label for="children">Children</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<select name="seats[STC]" id="seats-STC"onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -354,7 +354,7 @@
   <option value="10">10</option>
 </select></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIRST CLASS</p>
-<p><label for="adults">Adults</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTA]" id="seats-FTA">
+<p><label for="adults">Adults</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTA]" id="seats-FTA"onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -369,7 +369,7 @@
 </select>
 </p>
 <br>
-<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;<select name="seats[FTP]" id="seats-FTP">
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;<select name="seats[FTP]" id="seats-FTP"onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -384,7 +384,7 @@
 </select>
 <br><br>
 </p>
-<p><label for="children">Children</label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTC]" id="seats-FTC">
+<p><label for="children">Children</label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTC]" id="seats-FTC"onchange="calculate()">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
