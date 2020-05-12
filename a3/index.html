@@ -404,23 +404,53 @@
 </span>
 <br><br>
 <label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type='text' name='cust[name]' id="cust-name" pattern="^[a-zA-Z\-. ?]{1,100}$" >
+<input type='text' name='cust[name]' id="cust-name" pattern="^[a-zA-Z\-. ?]{1,100}$" required>
 <br><br>
 <label for="email">Email</label>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="email" name='cust[email]' id="cust-email" >
+<input type="email" name='cust[email]' id="cust-email" required>
 <br><br>
 <label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" >
+<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
 <br><br>
 <label for="creditcard">Credit Card</label>&nbsp;
-<input type="text" name="cust[card]" id="cust-card" pattern="^([0-9]){14,19}$">
+<input type="text" name="cust[card]" id="cust-card" pattern="^(( ?\d){14,19}$" required>
 <br><br>
-<label for="expiry">Expiry</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="month" name="cust[expiry]" id="cust-expiry" onchange="futureonly()"  >
-<br><br>
+<label for="expirymonth">Expiry Month</label>
+<select name="cust[expirymonth]" id="cust-expirymonth" onchange="futureonly()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="expiryyear">Expiry Year</label>
+<select name="cust[expiryyear]" id="cust-expiryyear" onchange="futureonly()">
+  <option value="">Please select</option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+  <option value="2024">2024</option>
+  <option value="2025">2025</option>
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <option value="2029">2029</option>
+  <option value="2030">2030</option>
+</select>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
 
       </form>
 

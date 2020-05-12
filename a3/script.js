@@ -44,14 +44,15 @@ function showhidden4() {
 
 
 
-function futureonly() {
-  var chosendate = document.getElementById("cust-expiry").value;
-  var today = new Date();
-  console.log(chosendate + "   " + today)
-  if (chosendate>today) {
-    alert("Please insert future date");
+function futureonly(){
+  var chosenmonth = document.getElementById("cust-expirymonth").value;
+  var chosenyear = document.getElementById("cust-expiryyear").value;
+  if (chosenmonth<5 && chosenyear==2020){
+    alert('Please choose a future date')
   }
 }
+
+   
 
 var priceSTA={};
 var priceSTP={};
