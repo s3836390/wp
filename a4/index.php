@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 3</title>
+
+  <!-- Keep wireframe.css for debugging, add your css to style.css -->
+  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Playfair+Display:ital,wght@1,900&display=swap"
+    rel="stylesheet">
+  <script defer src="script.js"></script>
+  <?php include 'tools.php' ?>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="movie">
+      <img src="Logo.jpg" alt="logo" width="300" height="200">
+      <span style='font-family: "Roboto"; font-size: 600%; '>ALOHA CINEMA</span>
+    </div>
+  </header>
+  <br><br><br><br><br><br><br>
+
+
+  <nav class="sticky">
+    <div>
+      <li> <a style="color: blue;text-decoration: none;" onclick="current1()" id="link1" href="#About Us">About Us&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </li>
+      <li> <a style="color: blue;text-decoration: none;" onclick="current2()" id="link2" href="#Prices">Prices&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+      <li> <a style="color: blue;text-decoration: none;" onclick="current3()" id="link3" href="#Now Showing">Now
+          Showing&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    </div>
+    </ul>
+  </nav>
+  <main>
+    <article id="wheel1" class="aboutus">
+      <a name="About Us">
+        <div id="About Us">
+        </div>
+      </a>
+      <h1>About Us</h1>
+      <p style="font-family:Open Sans Condensed;">
+        After 3 months of temporary closing and improving, we are rejoice to tell you that we are back. Now, with the
+        most brand new techniques, we are confident that you will find the best experiences here.
+      </p>
+      <ul style="font-family:Open Sans Condensed;">
+        <li>
+          Dolby Vision HDR brings extraordinary color, contrast, and brightness to the screen, transforming your viewing
+          experience.
+          <br>
+          <img src="dolby-vision.jpg" alt="dolby-vision" width="500" height="200">
+        </li>
+        <br>
+        <li>
+          Dolby Atmos creates powerful, moving audio by introducing two important concepts to cinema sound: audio
+          objects and overhead speakers.
+          <br>
+          <img src="dolby-atmos.jpg" alt="dolby-atmos" width="500" height="200">
+        </li>
+        <br>
+        <li>
+          There are also new seats for you: standard seats and reclinable first class seats
+          <br>
+          <img src="seat1.jpg" alt="seat1" width="400" height="200">
+          <img src="seat2.jpg" alt="seat1" width="400" height="200">
+        </li>
+      </ul>
+    </article>
+    <br> <br> <br> <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <article id="wheel2" class="prices" ;>
+      <a name="Prices">
+        <div id="Prices">
+        </div>
+      </a>
+      <h1>Prices</h1>
+      <table width="1100" height="400" style="font-family:Open Sans Condensed;">
+        <tr>
+          <th>Seat type</th>
+          <th>Seat code</th>
+          <th>All day Monday and Wednesday AND 12pm on Weekdays</th>
+          <th>All other times</th>
+        </tr>
+        <tr>
+          <td>Standard Adult</td>
+          <td>STA</td>
+          <td>14.00</td>
+          <td>19.80</td>
+        </tr>
+        <tr>
+          <td>Standard Concession</td>
+          <td>STP</td>
+          <td>12.50</td>
+          <td>17.50</td>
+        </tr>
+        <tr>
+          <td>Standard Child</td>
+          <td>STC</td>
+          <td>11.00</td>
+          <td>15.30</td>
+        </tr>
+        <tr>
+          <td>First Class Adult</td>
+          <td>FCA</td>
+          <td>24.00</td>
+          <td>30.00</td>
+        </tr>
+        <tr>
+          <td>First Class Concession</td>
+          <td>FCP</td>
+          <td>22.50</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>First Class Child</td>
+          <td>FCC</td>
+          <td>21.00</td>
+          <td>24.00</td>
+        </tr>
+      </table>
+
+    </article>
+
+    <article id="wheel3" style="font-family:Open Sans Condensed;">
+      <a name="Now Showing">
+        <div id="Now Showing">
+        </div>
+      </a>
+      <h1>Now Showing</h1>
+      <div class="row">
+        <div class="column">
+          
+          <h2>Avengers: Endgame</h2>
+          <p class="movie">
+            <a id="moviePanelACT" onclick="showhidden1()" href="#synopsisACT">
+            <img src="avenger.jpg" alt="avenger" width="120" height="200">
+            </a>
+            PG-13 <br>
+            <br>
+            Mon- <br>
+            Tue- <br>
+            Wed-9pm (T21) <br>
+            Thu-9pm (T21) <br>
+            Fri-9pm (T21) <br>
+            Sat-6pm (T18) <br>
+            Sun-6pm (T18) 
+
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Top End Wedding</h2>
+          <p class="movie">
+            <a id="moviePanelRMC" onclick="showhidden2()" href="#synopsisRMC">
+            <img src="wedding.jpg" alt="wedding" width="120" height="200">
+            </a>
+            R <br>
+            <br>
+            Mon-6pm (T18) <br>
+            Tue-6pm (T18) <br>
+            Wed- <br>
+            Thu- <br>
+            Fri- <br>
+            Sat-3pm (T15) <br>
+            Sun-3pm (T15) 
+
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Dumbo</h2>
+          <p class="movie">
+            <a id="moviePanelANM" onclick="showhidden3()" href="#synopsisANM">
+            <img src="dumbo.jpg" alt="dumbo" width="120" height="200">
+            </a>
+            G <br>
+            <br>
+            Mon-12pm (T12) <br>
+            Tue-12pm (T12) <br>
+            Wed-6pm (T18) <br>
+            Thu-6pm (T18) <br>
+            Fri-6pm (T18) <br>
+            Sat-12pm (T12) <br>
+            Sun-12pm (T12) 
+
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>The Happy Prince</h2>
+          <p class="movie">
+            <a id="moviePanelAHF" onclick="showhidden4()" href="#synopsisAHF">
+            <img src="prince.jpg" alt="prince" width="120" height="200">
+            </a>
+            PG-13 <br>
+            <br>
+            Mon- <br>
+            Tue- <br>
+            Wed-12pm (T12) <br>
+            Thu-12pm (T12) <br>
+            Fri-12pm (T12) <br>
+            Sat-9pm (T21) <br>
+            Sun-9pm (T21) 
+            
+
+          </p>
+        </div>
+
+
+
+
+    </article>
+
+    <article>
+
+      <h1>Synopsis Area</h1>
+
+
+      <div class="synopsis" id="synopsisACT">
+        <h2>Avengers:Endgame PG-13</h2>
+        <p  style="font-family:Open Sans Condensed;">
+  
+          <video src="trailer1.mov" controls width="700" height="200"></video>
+          Years after they've failed to stop Thanos from snapping, the Avengers now give up and move on. Suddenly, Ant
+          man come back along with a way to undo the past.
+          <br>
+          <br>
+          MAKE A BOOKING:
+          <button type="button" class="WED T21"onclick="booking1()">Wed-9pm (T21)</button>
+          <button type="button" class="THU T21"onclick="booking2()">Thu-9pm (T21)</button>
+          <button type="button" class="FRI T21"onclick="booking3()">Fri-9pm (T21)</button>
+          <button type="button" class="SAT T18"onclick="booking4()">Sat-6pm (T18)</button>
+          <button type="button" class="SUN T18"onclick="booking5()">Sun-6pm (T18)</button>
+        </p>
+      </div>
+      <br>
+      <div class="synopsis" id="synopsisRMC">
+        <h2>Top End Wedding R</h2>
+        <p  style="font-family:Open Sans Condensed;">
+          <video src="trailer2.mp4" controls width="700" height="200"></video>
+          Lauren and Ned have 10 days to find Lauren's mother who has gone AWOL in the remote far north of Australia so
+          that they can reunite her parents and pull off their dream wedding.
+          <br><br>
+          MAKE A BOOKING:
+          <button type="button" class="MON T18"onclick="booking6()">Mon-6pm (T18)</button>
+          <button type="button" class="TUE T18"onclick="booking7()">Tue-6pm (T18)</button>
+          <button type="button" class="SAT T15"onclick="booking8()">Sat-3pm (T15)</button>
+          <button type="button" class="SUN T15"onclick="booking9()">Sun-3pm (T15)</button>
+
+        </p>
+      </div>
+      <br>
+      <div class="synopsis" id="synopsisANM">
+        <h2>Dumbo G</h2>
+        <p  style="font-family:Open Sans Condensed;" >
+          <video src="trailer3.mp4" controls width="700" height="200"></video>
+          Holt, a circus performer, is tasked with caring for a baby elephant with oversized ears, Dumbo. But when it is discovered that Dumbo can fly, a few wicked men try to take advantage of the situation.
+          <br><br>
+          MAKE A BOOKING:
+          <button type="button" class="MON T12"onclick="booking10()">Mon-12pm (T12)</button>
+          <button type="button" class="TUE T12"onclick="booking11()">Tue-12pm (T12)</button>
+          <button type="button" class="WED T18"onclick="booking12()">Wed-6pm (T18)</button>
+          <button type="button" class="THU T18"onclick="booking13()">Thu-6pm (T18)</button>
+          <button type="button" class="FRI T18"onclick="booking14()">Fri-6pm (T18)</button>
+          <button type="button" class="SAT T12"onclick="booking15()">Sat-12pm (T12))</button>
+          <button type="button" class="SUN T12"onclick="booking16()">Sun-12pm (T12)</button>
+
+        </p>
+      </div>
+        <br>
+        <div class="synopsis" id="synopsisAHF">
+          <h2>The Happy Prince PG-13</h2>
+        <p style="font-family:Open Sans Condensed;" >
+          
+          <video src="trailer4.mp4" controls width="700" height="200"></video>
+        
+          His body ailing, Oscar Wilde lives out his last days in exile, observing the difficulties and failures surrounding him with ironic detachment, humour, and the wit that defined his life.
+          <br><br>
+          MAKE A BOOKING:
+          <button type="button" class="WED T12"onclick="booking17()">Wed-12pm (T12)</button>
+          <button type="button" class="THU T12"onclick="booking18()">Thu-12pm (T12)</button>
+          <button type="button" class="FRI T12"onclick="booking19()">Fri-12pm (T12)</button>
+          <button type="button" class="SAT T21"onclick="booking20()">Sat-9pm (T21)</button>
+          <button type="button" class="SUN T21"onclick="booking21()">Sun-9pm (T21)</button>
+        </p>
+        </div>
+      
+      
+    </article>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <article>
+      <h1>Booking Area</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="title"></span> <span> - </span>
+        <span id="day"></span><span> - </span>
+        <span id="time"></span>
+        <br><br>
+        STANDARD</p>
+      <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+        <input type="hidden" name="movie[id]" id="movie-id"  >
+        <input type="hidden" name="movie[day]" id="movie-day" >
+        <input type="hidden" name="movie[hour]" id="movie-hour" >
+<p> <label for="adults">Adults</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STA]" id="seats-STA" onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</p>
+<br>
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[STP]" id="seats-STP"onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+<br><br>
+</p>
+<p><label for="children">Children</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<select name="seats[STC]" id="seats-STC"onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIRST CLASS</p>
+<p><label for="adults">Adults</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTA]" id="seats-FTA"onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</p>
+<br>
+<p><label for="concession">Concession</label>&nbsp;&nbsp;&nbsp;<select name="seats[FTP]" id="seats-FTP"onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+<br><br>
+</p>
+<p><label for="children">Children</label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="seats[FTC]" id="seats-FTC"onchange="calculate()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select></p>
+<br><br>
+<label for="price">Total $</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="totalprice">
+
+</span>
+<br><br>
+<label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='text' name='cust[name]' id="cust-name" pattern="^[a-zA-Z\-. ?]{1,100}$" required>
+<br><br>
+<label for="email">Email</label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" name='cust[email]' id="cust-email" required>
+<br><br>
+<label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
+<br><br>
+<label for="creditcard">Credit Card</label>&nbsp;
+<input type="text" name="cust[card]" id="cust-card" pattern="^(( ?\d){14,19}$" required>
+<br><br>
+<label for="expirymonth">Expiry Month</label>
+<select name="cust[expirymonth]" id="cust-expirymonth" onchange="futureonly()">
+  <option value="">Please select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="expiryyear">Expiry Year</label>
+<select name="cust[expiryyear]" id="cust-expiryyear" onchange="futureonly()">
+  <option value="">Please select</option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+  <option value="2024">2024</option>
+  <option value="2025">2025</option>
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <option value="2029">2029</option>
+  <option value="2030">2030</option>
+</select>
+
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
+
+      </form>
+
+</article>
+    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<?php 
+   preShow($_POST);     // ie echo a string
+
+   preShow($_SESSION);
+
+  $aaarg = preShow($my_bad_array, true);    // ie return as a string
+
+  echo "Why is \n $aaarg \n not working?"; 
+?>
+  </main>
+
+  <footer>
+    <div>&copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Hua Tien Trung <br>
+      s3836390 <br>
+      huatientrung01@gmail.com <br>
+      0969501914 <br>
+      https://github.com/s3836390/wp.git
+      <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?></div>
+    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
+      Programming course at RMIT University in Melbourne, Australia.</div>
+    <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+  </footer>
+
+</body>
+
+</html>
