@@ -1,0 +1,61 @@
+
+table, th, td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+ }
+.movie img {
+    float: left;}
+    .column {
+        background-color: skyblue;
+            float: left;
+            width: 25%;
+     }
+     @media screen and (max-width: 900px) {
+        .column {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .column {
+          width: 100%;
+        }
+      }
+.synopsis video{
+    float: right;}
+.prices {background-image: url(background1.jpg);
+    background-color: aquamarine;} 
+
+.aboutus {background-color: skyblue;
+}
+li{
+  display: inline-block;
+
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: teal;
+    padding: 0.02px;
+    font-size: 20px;
+  
+  }
+
+
+  h1 {font-size: 250%;
+      color: red;
+padding: 40px;
+background-image: url(background3.jpg);
+}
+body {background-color: skyblue;}
+button {color: red; background-color: salmon; border: turquoise;
+  padding: 10px 20px;
+  border-radius: 15px;}
+article {
+  width: 90vw;
+  height: 100vh;
+}
+.synopsis {
+  visibility: hidden;
+}
