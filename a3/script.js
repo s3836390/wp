@@ -61,21 +61,7 @@ var priceFTA={};
 var priceFTP={};
 var priceFTC={};
 
-function booking1(){
-  
-  document.getElementById('movie-id').value='ACT';
-  document.getElementById('movie-day').value='WED';
-  document.getElementById('movie-hour').value='T21';
-  document.getElementById('title').innerHTML='Avengers: Endgame';
-  document.getElementById('day').innerHTML='Wednesday';
-  document.getElementById('time').innerHTML='9pm';
-  priceSTA.value=14;
-  priceSTP.value=12.5;
-  priceSTC.value=11;
-  priceFTA.value=24;
-  priceFTP.value=22.5;
-  priceFTC.value=21;
-}
+
 
 function booking2(){
   

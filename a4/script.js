@@ -61,6 +61,7 @@ var priceFTA={};
 var priceFTP={};
 var priceFTC={};
 
+
 function booking1(){
   
   document.getElementById('movie-id').value='ACT';

@@ -305,7 +305,7 @@
         <span id="time"></span>
         <br><br>
         STANDARD</p>
-      <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+      <form action="index.php" method="post">
         <input type="hidden" name="movie[id]" id="movie-id"  >
         <input type="hidden" name="movie[day]" id="movie-day" >
         <input type="hidden" name="movie[hour]" id="movie-hour" >
@@ -451,25 +451,21 @@
 
 <br><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
-
       </form>
 
 </article>
     
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<?php 
-   preShow($_POST);     // ie echo a string
-
-   preShow($_SESSION);
-
-  $aaarg = preShow($my_bad_array, true);    // ie return as a string
-
-  echo "Why is \n $aaarg \n not working?"; 
-?>
   </main>
 
   <footer>
+  <input type='submit' name='session-reset' value='Reset the session' >
+  <?php 
+  
+   printMyCode(); 
+   preShow($_POST);
+   preShow($_SESSION);
+?>
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
