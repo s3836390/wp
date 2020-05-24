@@ -32,7 +32,20 @@ function test_input($data){
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
-
+  return $data;
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST['cust']['name'])){
+     $nameErr ="Name is required";
+   } else {
+     $nameErr = test_input($_POST['cust']['name']);
+       if (!preg_match("/^[a-zA-Z ]*$/", $name)){
+       $nameErr= "Only letters and whitespace are allowed";
+       }
+     }
+  
+}
+
+
 
 ?>

@@ -305,7 +305,7 @@
         <span id="time"></span>
         <br><br>
         STANDARD</p>
-      <form action="index.php" method="post">
+      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <input type="hidden" name="movie[id]" id="movie-id"  >
         <input type="hidden" name="movie[day]" id="movie-day" >
         <input type="hidden" name="movie[hour]" id="movie-hour" >
@@ -404,17 +404,18 @@
 </span>
 <br><br>
 <label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type='text' name='cust[name]' id="cust-name" pattern="^[a-zA-Z\-. ?]{1,100}$" required>
+<input type='text' name='cust[name]' id="cust-name"  >
+<span><?php echo $nameErr; ?></span>
 <br><br>
 <label for="email">Email</label>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="email" name='cust[email]' id="cust-email" required>
+<input type="email" name='cust[email]' id="cust-email" >
 <br><br>
 <label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
+<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" >
 <br><br>
 <label for="creditcard">Credit Card</label>&nbsp;
-<input type="text" name="cust[card]" id="cust-card" pattern="^(( ?\d){14,19}$" required>
+<input type="text" name="cust[card]" id="cust-card" pattern="^(( ?\d){14,19}$" >
 <br><br>
 <label for="expirymonth">Expiry Month</label>
 <select name="cust[expirymonth]" id="cust-expirymonth" onchange="futureonly()">
