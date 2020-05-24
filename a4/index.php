@@ -404,7 +404,7 @@
 </span>
 <br><br>
 <label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type='text' name='cust[name]' id="cust-name"  >
+<input type='text' name='cust[name]' id="cust-name" value="<?php echo $name1 ?>">
 <span><?php echo $nameErr; ?></span>
 <br><br>
 <label for="email">Email</label>

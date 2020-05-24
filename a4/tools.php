@@ -38,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST['cust']['name'])){
      $nameErr ="Name is required";
    } else {
-     $nameErr = test_input($_POST['cust']['name']);
+     $name = test_input($_POST['cust']['name']);
        if (!preg_match("/^[a-zA-Z ]*$/", $name)){
+         $name1 = $name;
        $nameErr= "Only letters and whitespace are allowed";
        }
      }
