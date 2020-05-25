@@ -23,6 +23,18 @@ function php2js( $arr, $arrName ) {
   echo "</script>\n\n";
 }
 
+function isFullorDiscount($day,$hour) {
+  if ($day=='MON' || $day=='WED') {
+      return 'Discount';
+  } else {
+      if ($day=='TUE' || $day=='THU' || $day=='FRI'){
+          if ($hour='T12') { return 'Discount';}
+          else return 'Full';
+      } else return 'Full';
+
+  }
+}
+
 function test_input($data){
   $data = trim($data);
   $data = stripslashes($data);
