@@ -94,14 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($_POST['cust']['expirymonth'])){
-      $errorsFound++;
-    } else {
-      $month = $_POST['cust']['expirymonth'];
-      if ($month <= (date("m")+1)){
-        $errorsFound++;
-      };
-    }
+    
     if (empty($_POST['cust']['expiryyear'])){
       $errorsFound++;
     } else {
@@ -110,6 +103,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errorsFound++;
       };
     }
+
+    if (empty($_POST['cust']['expirymonth'])){
+      $errorsFound++;
+    } else {
+      $month = $_POST['cust']['expirymonth'];
+      if ($month <= (date("m")+1) && $year=date("y")){
+        $errorsFound++;
+      };
+    }
+
     if (empty($_POST['movie']['id'])){
       $errorsFound++;
     } else {

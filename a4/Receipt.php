@@ -7,9 +7,13 @@
 </head>
 <body>
 <?php
-include "tools.php";
 session_start();
+include "tools.php";
 preShow($_SESSION);
+
+if ( empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats'] )) {
+     header('Location: index.php');
+}
 ?>
 
 </body>
