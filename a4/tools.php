@@ -169,6 +169,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $errorsFound++;
     }
 
+    if ($_SESSION['movie']['id'] ='ACT')
+  {$moviename= 'Avengers: Endgame';}
+  if ($_SESSION['movie']['id'] ='RMC')
+  {$moviename= 'Top End Wedding';}
+  if ($_SESSION['movie']['id'] ='ANM')
+  {$moviename= 'Dumbo';}
+  if ($_SESSION['movie']['id'] ='AHF')
+  {$moviename= 'The Happy Prince';}
+  if ($_SESSION['movie']['day'] ='MON')
+  {$fullday= 'Monday';}
+  if ($_SESSION['movie']['day'] ='TUE')
+  {$fullday= 'Tuesday';}
+  if ($_SESSION['movie']['day'] ='WED')
+  {$fullday= 'Wednesday';}
+  if ($_SESSION['movie']['day'] ='THU')
+  {$fullday= 'Thursday';}
+  if ($_SESSION['movie']['day'] ='FRI')
+  {$fullday= 'Friday';}
+  if ($_SESSION['movie']['day'] ='SAT')
+  {$fullday= 'Saturday';}
+  if ($_SESSION['movie']['day'] ='SUN')
+  {$fullday= 'Sunday';}
+  if ($_SESSION['movie']['hour'] ='T12')
+  {$fullhour= '12PM';}
+  if ($_SESSION['movie']['hour'] ='T15')
+  {$fullhour= '3PM';}
+  if ($_SESSION['movie']['hour'] ='T18')
+  {$fullhour= '6PM';}
+  if ($_SESSION['movie']['hour'] ='T21')
+  {$fullhour= '9PM';}
+
     if($errorsFound==0){
       $_SESSION['cust']['name']=$cleanName;
       $_SESSION['cust']['email']=$cleanEmail;
@@ -207,35 +238,6 @@ if (isset($_POST['session-reset'])) {
   unset($_SESSION['seats']['FTC']);
   }
 
-  if ($_SESSION['movie']['id'] ='ACT')
-  {$moviename= 'Avengers: Endgame';}
-  if ($_SESSION['movie']['id'] ='RMC')
-  {$moviename= 'Top End Wedding';}
-  if ($_SESSION['movie']['id'] ='ANM')
-  {$moviename= 'Dumbo';}
-  if ($_SESSION['movie']['id'] ='AHF')
-  {$moviename= 'The Happy Prince';}
-  if ($_SESSION['movie']['day'] ='MON')
-  {$fullday= 'Monday';}
-  if ($_SESSION['movie']['day'] ='TUE')
-  {$fullday= 'Tuesday';}
-  if ($_SESSION['movie']['day'] ='WED')
-  {$fullday= 'Wednesday';}
-  if ($_SESSION['movie']['day'] ='THU')
-  {$fullday= 'Thursday';}
-  if ($_SESSION['movie']['day'] ='FRI')
-  {$fullday= 'Friday';}
-  if ($_SESSION['movie']['day'] ='SAT')
-  {$fullday= 'Saturday';}
-  if ($_SESSION['movie']['day'] ='SUN')
-  {$fullday= 'Sunday';}
-  if ($_SESSION['movie']['hour'] ='T12')
-  {$fullhour= '12PM';}
-  if ($_SESSION['movie']['hour'] ='T15')
-  {$fullhour= '3PM';}
-  if ($_SESSION['movie']['hour'] ='T18')
-  {$fullhour= '6PM';}
-  if ($_SESSION['movie']['hour'] ='T21')
-  {$fullhour= '9PM';}
+  
 
 ?>

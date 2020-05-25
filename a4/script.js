@@ -44,13 +44,7 @@ function showhidden4() {
 
 
 
-function futureonly(){
-  var chosenmonth = document.getElementById("cust-expirymonth").value;
-  var chosenyear = document.getElementById("cust-expiryyear").value;
-  if (chosenmonth<5 && chosenyear==2020){
-    alert('Please choose a future date')
-  }
-}
+
 
    
 

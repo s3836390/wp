@@ -61,7 +61,13 @@ fclose($myfile);
 <span style ="color:red ;font-size:50px"> Invoice </span> <br>
 <span style ="font-size:30px">Number:&nbsp;00&nbsp;123&nbsp;456&nbsp;789</span> <br> <br>
 <span style ="color:blue ;font-size:30px"> Movie:</span>
-<span style ="color:green ;font-size:30px"> <?php echo $moviename; ?> </span>
+<span style ="color:green ;font-size:30px"> <?php 
+if ($_SESSION['movie']['id'] ='ACT'){echo 'Avengers: Endgame';} 
+if ($_SESSION['movie']['id'] ='RMC'){echo 'Top End Wedding';} 
+if ($_SESSION['movie']['id'] ='ANM'){echo 'Dumbo';} 
+if ($_SESSION['movie']['id'] ='AHF'){echo 'The Happy Prince';} 
+
+?> </span>
 <br><br>
 <span style ="color:blue ;font-size:30px"> Time:</span>
 <span style ="color:green ;font-size:30px"> <?php echo $fullday;echo ' '; echo $fullhour ?> </span>
@@ -144,17 +150,53 @@ fclose($myfile);
    <br><br><br>
 </section>
 
-<section class='A4page'>
-<img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style='float:right'>
-<p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
-<p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STA </p>
-</section>
 <?php   
   for($countSTA=1;$countSTA <= $_SESSION['seats']['STA'];$countSTA++){
-      echo '<section class="A4page">';
-  echo  '<p style ="color:green ;font-size:30px"> Individual Ticket</p>' ;
-  echo '<p> STA </p>';
-  echo '</section>';
+      echo '<section class="A4page">
+      <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+      <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+      <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STA </p>
+      </section>';
+
+}
+for($countSTP=1;$countSTP <= $_SESSION['seats']['STP'];$countSTP++){
+    echo '<section class="A4page">
+    <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+    <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+    <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STP </p>
+    </section>';
+
+}
+for($countSTC=1;$countSTC <= $_SESSION['seats']['STC'];$countSTC++){
+    echo '<section class="A4page">
+    <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+    <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+    <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STC </p>
+    </section>';
+
+}
+for($countFTA=1;$countFTA <= $_SESSION['seats']['FTA'];$countFTA++){
+    echo '<section class="A4page">
+    <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+    <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+    <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTA </p>
+    </section>';
+
+}
+for($countFTP=1;$countFTP <= $_SESSION['seats']['FTP'];$countFTP++){
+    echo '<section class="A4page">
+    <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+    <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+    <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTP </p>
+    </section>';
+
+}
+for($countFTC=1;$countFTC <= $_SESSION['seats']['FTC'];$countFTC++){
+    echo '<section class="A4page">
+    <img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style="float:right">
+    <p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+    <p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTC </p>
+    </section>';
 
 }
 ?>

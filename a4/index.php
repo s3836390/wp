@@ -427,7 +427,7 @@
 <span class ='error'>*<?php echo $cardErr; ?></span>
 <br><br>
 <label for="expirymonth">Expiry Month</label>
-<select name="cust[expirymonth]" id="cust-expirymonth" onchange="futureonly()">
+<select name="cust[expirymonth]" id="cust-expirymonth">
   <option value="">Please select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -444,7 +444,7 @@
 </select>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <label for="expiryyear">Expiry Year</label>
-<select name="cust[expiryyear]" id="cust-expiryyear" onchange="futureonly()">
+<select name="cust[expiryyear]" id="cust-expiryyear">
   <option value="">Please select</option>
   <option value="2020">2020</option>
   <option value="2021">2021</option>
@@ -461,13 +461,13 @@
 
 <br><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
-<br>
-<input type="submit" name="session-reset" value="Reset the session" >
+<br> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="session-reset" value="Reset the session" >
       </form>
 
 </article>
     
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </main>
 
   <footer>
