@@ -6,11 +6,11 @@
     <title>Document</title>
    <style>
       .A4page {
+        border-style: double solid;
         background-color: grey;
     size: 21cm 29.7cm;
-    margin: 5mm 45mm 30mm 10mm;
-    
-}
+    margin: 5mm 100mm 10mm 10mm;}
+
    </style> 
 </head>
 <body>
@@ -56,9 +56,10 @@ fclose($myfile);
 
 ?>
 
-<section class="A4page">
-<span style ="color:red ;font-size:50px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoice </span> <br>
-<span style ="font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number:&nbsp;00&nbsp;123&nbsp;456&nbsp;789</span> <br> <br>
+<section class="A4page" >
+<img src="ticketicon.jpg" width="500" height="455" alt="ticket logo" style='float:right'>
+<span style ="color:red ;font-size:50px"> Invoice </span> <br>
+<span style ="font-size:30px">Number:&nbsp;00&nbsp;123&nbsp;456&nbsp;789</span> <br> <br>
 <span style ="color:blue ;font-size:30px"> Movie:</span>
 <span style ="color:green ;font-size:30px"> <?php echo $moviename; ?> </span>
 <br><br>
@@ -119,8 +120,10 @@ fclose($myfile);
 </section>
 
 <section class='A4page'>
-   <p style ="color:red ;font-size:30px"> Group Ticket</p>
-   <table border='1'>
+<img src="ticketicon.jpg" width="500" height="193" alt="ticket logo" style='float:right'>
+<br><br><br>  
+<span style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group Ticket</span>
+ <table border='1'>
        <tr style ="color:red">
            <th>STA</th>
            <th>STP</th>
@@ -138,7 +141,23 @@ fclose($myfile);
            <th><?php echo $_SESSION['seats']['FTC'] ?></th>
        </tr>
    </table>
+   <br><br><br>
 </section>
+
+<section class='A4page'>
+<img src="ticketicon.jpg" width="500" height="156" alt="ticket logo" style='float:right'>
+<p style ="color:green ;font-size:30px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Ticket</p>
+<p style ="color:red ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STA </p>
+</section>
+<?php   
+  for($countSTA=1;$countSTA <= $_SESSION['seats']['STA'];$countSTA++){
+      echo '<section class="A4page">';
+  echo  '<p style ="color:green ;font-size:30px"> Individual Ticket</p>' ;
+  echo '<p> STA </p>';
+  echo '</section>';
+
+}
+?>
 
 </body>
 </html>

@@ -46,7 +46,7 @@ li{
   h1 {font-size: 250%;
       color: red;
 padding: 40px;
-background-image: url(background3.jpg);
+background-image:url('C:/MAMP/htdocs/wp/a4/ticketicon.jpg');
 }
 body {background-color: skyblue;}
 button {color: red; background-color: salmon; border: turquoise;
