@@ -415,14 +415,16 @@
 <br><br>
 <label for="email">Email</label>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="email" name='cust[email]' id="cust-email" value="<?php echo $name1 ?>" >
+<input type="text" name='cust[email]' id="cust-email" value="<?php echo $email1 ?>" >
 <span class ='error'>*<?php echo $emailErr; ?></span>
 <br><br>
 <label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" >
+<input type="tel" name='cust[phone]' id="cust-phone" value="<?php echo $phone1 ?>" >
+<span class ='error'>*<?php echo $phoneErr; ?></span>
 <br><br>
 <label for="creditcard">Credit Card</label>&nbsp;
-<input type="text" name="cust[card]" id="cust-card" pattern="^(( ?\d){14,19}$" >
+<input type="text" name="cust[card]" id="cust-card" value="<?php echo $card1 ?>" >
+<span class ='error'>*<?php echo $cardErr; ?></span>
 <br><br>
 <label for="expirymonth">Expiry Month</label>
 <select name="cust[expirymonth]" id="cust-expirymonth" onchange="futureonly()">

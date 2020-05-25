@@ -48,11 +48,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr ="Email is required";
     } else {
       $email = test_input($_POST['cust']['email']);
-        if (!filler_var($email,FILTER_VALIDATE_EMAIL)){
+        if (!filter_var($email,FILTER_VALIDATE_EMAIL)){
           $email1 = $email;
-        $emailErr= "Only letters and whitespace are allowed";
+        $emailErr= "Invalid Email address";
         }
-      }
+    }
+    if (empty($_POST['cust']['phone'])){
+      $phoneErr ="Phone number is required";
+    } else {
+      $phone = test_input($_POST['cust']['phone']);
+        if (!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/", $phone)){
+          $phone1 = $phone;
+        $phoneErr= "Invalid Mobilephone number";
+        }
+    }
+    if (empty($_POST['cust']['card'])){
+      $cardErr ="Credit card is required";
+    } else {
+      $card = test_input($_POST['cust']['card']);
+        if (!preg_match("/^( ?\d){14,19}$/", $card)){
+          $card1 = $card;
+        $cardErr= "Invalid Credit card";
+        }
+    }
 }
 
 
