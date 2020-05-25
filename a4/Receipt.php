@@ -17,6 +17,21 @@ if ( empty( $_SESSION['cust']['name'] ||$_SESSION['cust']['email'] ||$_SESSION['
      header('Location: index.php');
 }
 
+function isFullorDiscount($day,$hour) {
+    if ($day=='MON' || $day=='WED') {
+        return 'Discount';
+    } else {
+        if ($day=='TUE' || $day=='THU' || $day=='FRI'){
+            if ($hour='T12') { return 'Discount';}
+            else return 'Full';
+        } else return 'Full';
+
+    }
+}
+
+$myfile= fopen("bookings.txt","w");
+$now = date('d/m h:i');
+
 ?>
 
 </body>
