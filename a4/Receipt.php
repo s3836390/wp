@@ -36,20 +36,20 @@ else {
     $_SESSION['seats']['FTP'] * 27+
     $_SESSION['seats']['FTC'] * 24; 
 }
-
+$totalprice = number_format($total,2);
 $myfile= fopen("bookings.txt","w");
 $now = date('d/m h:i');
 $cells = array_merge( 
- [ $now ],$_SESSION['cust']['name']  ,$_SESSION['cust']['email']  , $_SESSION['cust']['phone'] , 
- $_SESSION['movie']['id'],$_SESSION['movie']['day'],$_SESSION['movie']['hour'], 
- $_SESSION['seats']['STA'] , $_SESSION['seats']['STP'] , $_SESSION['seats']['STC'] , $_SESSION['seats']['FTA'] , $_SESSION['seats']['FTP'] , $_SESSION['seats']['FTC'] , 
- (array) $total 
+ [ $now ],(array)$_SESSION['cust']['name']  ,(array)$_SESSION['cust']['email']  , (array)$_SESSION['cust']['phone'] , (array)$_SESSION['movie']['id'],(array)$_SESSION['movie']['day'],(array)$_SESSION['movie']['hour'], (array)$_SESSION['seats']['STA'] , (array)$_SESSION['seats']['STP'] , (array)$_SESSION['seats']['STC'] , (array)$_SESSION['seats']['FTA'] ,(array) $_SESSION['seats']['FTP'] ,(array) $_SESSION['seats']['FTC'] , 
+ (array) $totalprice 
 );
 
 fputcsv ($myfile,$cells);
 fclose($myfile);
 
 ?>
+
+
 
 </body>
 </html>
