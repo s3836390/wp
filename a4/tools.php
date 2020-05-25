@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $errorsFound++;
     } else {
       $month = $_POST['cust']['expirymonth'];
-      if ($month <= (date("m")+1) && $year=date("y")){
+      if ($month <= (date("m")+1) && $year==date("y")){
         $errorsFound++;
       };
     }

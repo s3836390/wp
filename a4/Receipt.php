@@ -57,7 +57,8 @@ fclose($myfile);
 ?>
 
 <section class="A4page">
-<p style ="color:red ;font-size:70px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoice </p>
+<span style ="color:red ;font-size:50px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoice </span> <br>
+<span style ="font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number:&nbsp;00&nbsp;123&nbsp;456&nbsp;789</span> <br> <br>
 <span style ="color:blue ;font-size:30px"> Movie:</span>
 <span style ="color:green ;font-size:30px"> <?php echo $moviename; ?> </span>
 <br><br>
@@ -115,6 +116,28 @@ fclose($myfile);
     </tr>
 </table>
 
+</section>
+
+<section class='A4page'>
+   <p style ="color:red ;font-size:30px"> Group Ticket</p>
+   <table border='1'>
+       <tr style ="color:red">
+           <th>STA</th>
+           <th>STP</th>
+           <th>STC</th>
+           <th>FTA</th>
+           <th>FTP</th>
+           <th>FTC</th>
+       </tr>
+       <tr>
+           <th><?php echo $_SESSION['seats']['STA'] ?></th>
+           <th><?php echo $_SESSION['seats']['STP'] ?></th>
+           <th><?php echo $_SESSION['seats']['STC'] ?></th>
+           <th><?php echo $_SESSION['seats']['FTA'] ?></th>
+           <th><?php echo $_SESSION['seats']['FTP'] ?></th>
+           <th><?php echo $_SESSION['seats']['FTC'] ?></th>
+       </tr>
+   </table>
 </section>
 
 </body>
