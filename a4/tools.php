@@ -35,6 +35,8 @@ $cleanName=$_POST['cust']['name'];
 $cleanEmail=$_POST['cust']['email'];
 $cleanPhone=$_POST['cust']['phone'];
 $cleanCard=$_POST['cust']['card'];
+$cleanMonth=$_POST['cust']['expirymonth'];
+$cleanYear=$_POST['cust']['expiryyear'];
 $cleanId=$_POST['movie']['id'];
 $cleanDay=$_POST['movie']['day'];
 $cleanHour=$_POST['movie']['hour'];
@@ -44,6 +46,7 @@ $cleanSTC=$_POST['seats']['STC'];
 $cleanFTA=$_POST['seats']['FTA'];
 $cleanFTP=$_POST['seats']['FTP'];
 $cleanFTC=$_POST['seats']['FTC'];
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST['cust']['name'])){
@@ -89,6 +92,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cardErr= "Invalid Credit card";
         $errorsFound++;
         }
+    }
+
+    if (empty($_POST['cust']['expirymonth'])){
+      $errorsFound++;
+    } else {
+      $month = $_POST['cust']['expirymonth'];
+      if ($month <= (date("m")+1)){
+        $errorsFound++;
+      };
+    }
+    if (empty($_POST['cust']['expiryyear'])){
+      $errorsFound++;
+    } else {
+      $year = $_POST['cust']['expiryyear'];
+      if ($year < (date("y"))){
+        $errorsFound++;
+      };
     }
     if (empty($_POST['movie']['id'])){
       $errorsFound++;
@@ -139,6 +159,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION['cust']['email']=$cleanEmail;
       $_SESSION['cust']['phone']=$cleanPhone;
       $_SESSION['cust']['card']=$cleanCard;
+      $_SESSION['cust']['expirymonth']=$cleanMonth;
+      $_SESSION['cust']['expiryyear']=$cleanYear;
       $_SESSION['movie']['id']=$cleanId;
       $_SESSION['movie']['day']=$cleanDay;
       $_SESSION['movie']['hour']=$cleanHour;
@@ -157,6 +179,17 @@ if (isset($_POST['session-reset'])) {
   unset($_SESSION['cust']['email']);
   unset($_SESSION['cust']['phone']);
   unset($_SESSION['cust']['card']);
+  unset($_SESSION['cust']['expirymonth']);
+  unset($_SESSION['cust']['expiryyear']);
+  unset($_SESSION['movie']['id']);
+  unset($_SESSION['movie']['day']);
+  unset($_SESSION['movie']['hour']);
+  unset($_SESSION['seats']['STA']);
+  unset($_SESSION['seats']['STP']);
+  unset($_SESSION['seats']['STC']);
+  unset($_SESSION['seats']['FTA']);
+  unset($_SESSION['seats']['FTP']);
+  unset($_SESSION['seats']['FTC']);
   }
 
 ?>
