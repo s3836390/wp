@@ -16,6 +16,9 @@
     rel="stylesheet">
   <script defer src="script.js"></script>
   <?php include 'tools.php' ?>
+  <style>
+      .error {color: #FF0000;}
+  </style>
 </head>
 
 <body>
@@ -401,15 +404,19 @@
 <label for="price">Total $</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span id="totalprice">
 
+
 </span>
+<br><br><br><br>
+<span class="error">*Required field </span>
 <br><br>
 <label for="name">Name</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type='text' name='cust[name]' id="cust-name" value="<?php echo $name1 ?>">
-<span><?php echo $nameErr; ?></span>
+<input type="text" name='cust[name]' id="cust-name" value="<?php echo $name1 ?>">
+<span class="error">*<?php echo $nameErr; ?></span>
 <br><br>
 <label for="email">Email</label>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="email" name='cust[email]' id="cust-email" >
+<input type="email" name='cust[email]' id="cust-email" value="<?php echo $name1 ?>" >
+<span class ='error'>*<?php echo $emailErr; ?></span>
 <br><br>
 <label for="mobile">Mobile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="tel" name='cust[phone]' id="cust-phone" pattern="^(\(04\)|04|\+614)( ?\d){8}$" >

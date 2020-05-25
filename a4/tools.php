@@ -39,12 +39,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $nameErr ="Name is required";
    } else {
      $name = test_input($_POST['cust']['name']);
-       if (!preg_match("/^[a-zA-Z ]*$/", $name)){
+       if (!preg_match("/^[a-zA-Z\-. ?]{1,100}$/", $name)){
          $name1 = $name;
        $nameErr= "Only letters and whitespace are allowed";
        }
      }
-  
+     if (empty($_POST['cust']['email'])){
+      $emailErr ="Email is required";
+    } else {
+      $email = test_input($_POST['cust']['email']);
+        if (!filler_var($email,FILTER_VALIDATE_EMAIL)){
+          $email1 = $email;
+        $emailErr= "Only letters and whitespace are allowed";
+        }
+      }
 }
 
 
