@@ -308,7 +308,7 @@
         <span id="time"></span>
         <br><br>
         STANDARD</p>
-      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+      <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
         <input type="hidden" name="movie[id]" id="movie-id"  >
         <input type="hidden" name="movie[day]" id="movie-day" >
         <input type="hidden" name="movie[hour]" id="movie-hour" >

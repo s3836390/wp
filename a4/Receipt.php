@@ -17,7 +17,6 @@
 <?php
 session_start();
 include "tools.php";
-
 if ( empty( $_SESSION['cust']['name'] ||$_SESSION['cust']['email'] ||$_SESSION['cust']['phone'] ||$_SESSION['cust']['card'] ||$_SESSION['cust']['expirymonth'] ||$_SESSION['cust']['expiryyear'] || $_SESSION['movie']['id'] || $_SESSION['movie']['day'] ||$_SESSION['movie']['hour'] || 
 
 ($_SESSION['seats']['STA'] && $_SESSION['seats']['STP'] &&$_SESSION['seats']['STC'] &&$_SESSION['seats']['FTA'] &&$_SESSION['seats']['FTP'] &&$_SESSION['seats']['FTC']))) {
@@ -25,7 +24,7 @@ if ( empty( $_SESSION['cust']['name'] ||$_SESSION['cust']['email'] ||$_SESSION['
 }
 
 
-if (isFullorDiscount($day,$hour) == 'Discount') {
+if (isFullorDiscount($_SESSION['movie']['day'],$_SESSION['movie']['hour']) == 'Discount') {
     $total = 
     $_SESSION['seats']['STA'] * 14 +
     $_SESSION['seats']['STP'] * 12.5+
@@ -62,15 +61,32 @@ fclose($myfile);
 <span style ="font-size:30px">Number:&nbsp;00&nbsp;123&nbsp;456&nbsp;789</span> <br> <br>
 <span style ="color:blue ;font-size:30px"> Movie:</span>
 <span style ="color:green ;font-size:30px"> <?php 
-if ($_SESSION['movie']['id'] ='ACT'){echo 'Avengers: Endgame';} 
-if ($_SESSION['movie']['id'] ='RMC'){echo 'Top End Wedding';} 
-if ($_SESSION['movie']['id'] ='ANM'){echo 'Dumbo';} 
-if ($_SESSION['movie']['id'] ='AHF'){echo 'The Happy Prince';} 
+if ($_SESSION['movie']['id'] =='ACT'){echo 'Avengers: Endgame';}
+    else { if ($_SESSION['movie']['id'] =='RMC'){echo 'Top End Wedding';}
+    else { if ($_SESSION['movie']['id'] =='ANM'){echo 'Dumbo';}
+    else {echo 'The Happy Prince';}
+
+         }
+         }
 
 ?> </span>
 <br><br>
 <span style ="color:blue ;font-size:30px"> Time:</span>
-<span style ="color:green ;font-size:30px"> <?php echo $fullday;echo ' '; echo $fullhour ?> </span>
+<span style ="color:green ;font-size:30px"> <?php 
+if ($_SESSION['movie']['day'] =='MON'){echo'Monday';}
+else {if($_SESSION['movie']['day'] =='TUE'){echo'Tuesday';}
+else {if($_SESSION['movie']['day'] =='WED'){echo 'Wednesday';}
+else {if($_SESSION['movie']['day'] =='THU'){echo 'Thursday';}
+else {if($_SESSION['movie']['day'] =='FRI'){echo 'Friday';}
+else {if($_SESSION['movie']['day'] =='SAT'){echo 'Saturday';}
+else {echo 'Sunday';}}}}}}
+echo ' ';
+if ($_SESSION['movie']['hour'] =='T12'){echo'12PM';}
+else {if($_SESSION['movie']['hour'] =='T15'){echo'9PM';}
+else {if($_SESSION['movie']['hour'] =='T18'){echo '6PM';}
+else {echo '9PM';}}}
+
+ ?> </span>
 <br> <br>
 <table border='1'>
     <tr>
