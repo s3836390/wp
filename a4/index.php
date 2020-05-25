@@ -461,6 +461,8 @@
 
 <br><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="order" value="Order" id="or-der">
+<br>
+<input type="submit" name="session-reset" value="Reset the session" >
       </form>
 
 </article>
@@ -469,7 +471,7 @@
   </main>
 
   <footer>
-  <input type='submit' name='session-reset' value='Reset the session' >
+  
   <?php 
   
    printMyCode(); 
