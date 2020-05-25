@@ -11,9 +11,12 @@ session_start();
 include "tools.php";
 preShow($_SESSION);
 
-if ( empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats'] )) {
+if ( empty( $_SESSION['cust']['name'] ||$_SESSION['cust']['email'] ||$_SESSION['cust']['phone'] ||$_SESSION['cust']['card'] ||$_SESSION['cust']['expirymonth'] ||$_SESSION['cust']['expiryyear'] || $_SESSION['movie']['id'] || $_SESSION['movie']['day'] ||$_SESSION['movie']['hour'] || 
+
+($_SESSION['seats']['STA'] && $_SESSION['seats']['STP'] &&$_SESSION['seats']['STC'] &&$_SESSION['seats']['FTA'] &&$_SESSION['seats']['FTP'] &&$_SESSION['seats']['FTC']))) {
      header('Location: index.php');
 }
+
 ?>
 
 </body>
