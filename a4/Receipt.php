@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <style>
+      .A4page {
+        background-color: grey;
+    size: 21cm 29.7cm;
+    margin: 5mm 45mm 30mm 10mm;
+    
+}
+   </style> 
 </head>
 <body>
 <?php
 session_start();
 include "tools.php";
-preShow($_SESSION);
 
 if ( empty( $_SESSION['cust']['name'] ||$_SESSION['cust']['email'] ||$_SESSION['cust']['phone'] ||$_SESSION['cust']['card'] ||$_SESSION['cust']['expirymonth'] ||$_SESSION['cust']['expiryyear'] || $_SESSION['movie']['id'] || $_SESSION['movie']['day'] ||$_SESSION['movie']['hour'] || 
 
@@ -49,7 +56,66 @@ fclose($myfile);
 
 ?>
 
+<section class="A4page">
+<p style ="color:red ;font-size:70px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoice </p>
+<span style ="color:blue ;font-size:30px"> Movie:</span>
+<span style ="color:green ;font-size:30px"> <?php echo $moviename; ?> </span>
+<br><br>
+<span style ="color:blue ;font-size:30px"> Time:</span>
+<span style ="color:green ;font-size:30px"> <?php echo $fullday;echo ' '; echo $fullhour ?> </span>
+<br> <br>
+<table border='1'>
+    <tr>
+        <th style ="color:red">Seat Quality</th>
+        <th style ="color:red">Seat Quality</th>
+    </tr>
+    <tr>
+        <th>STA</th>
+        <th><?php echo $_SESSION['seats']['STA'] ?></th>
+    </tr>
+    <tr>
+        <th>STP</th>
+        <th><?php echo $_SESSION['seats']['STP'] ?></th>
+    </tr>
+    <tr>
+        <th>STC</th>
+        <th><?php echo $_SESSION['seats']['STC'] ?></th>
+    </tr>
+    <tr>
+        <th>FTA</th>
+        <th><?php echo $_SESSION['seats']['FTA'] ?></th>
+    </tr>
+    <tr>
+        <th>FTP</th>
+        <th><?php echo $_SESSION['seats']['FTP'] ?></th>
+    </tr>
+    <tr>
+        <th>FTC</th>
+        <th><?php echo $_SESSION['seats']['FTC'] ?></th>
+    </tr>
+    <tr>
+        <th colspan="2" >
+            <span style ="color:red">Sub Total:</span>
+            <span>$</span>
+        <?php echo $totalprice ?>
+    </th>
+    </tr>
+    <tr>
+        <th colspan="2"> 
+        <span style ="color:red">Tax(10%):</span>
+            <span>$</span>
+        <?php echo $totalprice*0.1 ?>
+    </th>
+    </tr>
+    <tr>
+        <th colspan="2"> <span style ="color:red">Grand Total:</span>
+            <span>$</span>
+        <?php echo $totalprice*1.1 ?>
+    </th>
+    </tr>
+</table>
 
+</section>
 
 </body>
 </html>
